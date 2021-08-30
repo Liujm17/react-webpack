@@ -1,0 +1,215 @@
+.content {
+    width: 100%;
+    min-height: 320px;
+    background: white;
+    box-sizing: border-box;
+    padding: 10px 20px;
+
+    .first {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eaeaea;
+
+        .place {
+            flex: 1;
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        .place:nth-child(3) {
+            text-align: right;
+        }
+
+        .img {
+            flex: 0.5;
+        }
+    }
+
+    .second {
+        width: 100%;
+        height: 80px;
+        border-bottom: 1px solid #eaeaea;
+        display: flex;
+        align-items: center;
+
+        .place {
+            display: flex;
+            align-items: center;
+
+            .date {
+                font-size: 32px;
+                font-weight: 500;
+                color: black;
+            }
+
+            .week {
+                font-size: 24px;
+                font-weight: 400;
+                color: gray;
+            }
+        }
+    }
+
+    .third {
+        width: 100%;
+        height: 160px;
+
+        .slt {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span:nth-child(1) {
+                font-size: 24px;
+                font-weight: 400;
+                color: gray;
+            }
+        }
+
+        .bt {
+            width: 100%;
+            height: 50%;
+        }
+    }
+
+    /*date的scss*/
+    .date-table {
+        width: 100%;
+        margin-bottom: 15px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        text-align: left;
+    }
+
+    .date-table tr,
+    .date-table td,
+    .date-table th {
+        padding: 0;
+        margin: 0;
+    }
+
+    .date-table thead h5 {
+        font-size: 18px;
+        line-height: 39px;
+        text-align: center;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #cdcdcd;
+    }
+
+    .data-table-weeks {
+        text-align: center;
+
+        .weekend {
+            color: #ff9036
+        }
+    }
+
+    .data-table-days {
+        td {
+            text-align: center;
+            border: 2.5px solid #e3e3e3;
+            height: 50px;
+            font-size: 25px;
+        }
+
+        td:nth-child(6),
+        td:nth-child(7) {
+            color: #ff9036
+        }
+
+        .null {
+            background: #e3e3e3;
+        }
+
+        .disabled {
+            background: #f3f3f3;
+        }
+    }
+}
+
+
+/*city的scss*/
+.city-bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .city-icon {
+        font-size: 32px;
+        color: white
+    }
+
+    .city-header {
+        width: 100%;
+        height: 80px;
+        background: #00a8bc;
+        display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+        .ant-input {
+            font-size: 20px
+        }
+    }
+
+    .city-content {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        background: white;
+
+        .centent-left {
+            height: 100%;
+            width: 100%;
+            overflow-y: auto;
+
+            .city-ul {
+                padding: 0;
+                margin: 0;
+
+                .city-li {
+                    list-style-type: none;
+                    display: block;
+                    height: 55px;
+                    line-height: 55px;
+                    padding-left: 25px;
+                    border-bottom: 1px solid #e3e6e9;
+                    margin-left: 15px;
+                }
+
+                .city-li:nth-child(1) {
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 16px;
+                    background-color: #f2f8fb;
+                    padding: 0 15px;
+                    margin-left: 0;
+                    position: sticky;
+                    top: 0;
+                    border-bottom: 0;
+                }
+
+                .city-fit-li {
+                    list-style-type: none;
+                    display: block;
+                    height: 55px;
+                    line-height: 55px;
+                    padding-left: 25px;
+                    border-bottom: 1px solid #e3e6e9;
+                    margin-left: 15px;
+                }
+
+            }
+        }
+    }
+}
